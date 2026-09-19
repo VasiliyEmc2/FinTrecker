@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Мои финансы</title>
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogItCb0LjRh9C90YvQtSDRhNC40L3QsNC90YHRiyIsICJzaG9ydF9uYW1lIjogItCk0LjQvdCw0L3RgdGLIiwgInN0YXJ0X3VybCI6ICIuIiwgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMxODFDMjYiLCAidGhlbWVfY29sb3IiOiAiIzE4MUMyNiIsICJpY29ucyI6IFt7InNyYyI6ICJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQWdBQUFBSUFDQVlBQUFEMGVOVDZBQUFTTWtsRVFWUjRuTzNkUDQ0YlJ4ckc0WktnR3ppUkFUbVZrdzExQkdHdkpHQVBzSUN1dE5BUkZHNWlwelpnSno2RE43RHA1WXpuRHpuc3F2cXEzdWNKRFdPbXVrWDE5Mk4xazNyVktPWHR1L2UvejE0RFFBKy8vdnpqcTlscjRQLzhZUXhtd0FNOFRDQ001V1IzWk5nRDNFWVU5T1BFSHNqQUIraExFQnpIaWJ5QmdROHdseUI0T1NmdVNvWStRRTFpNERwTzFnVU1mWUMxaUlIbk9VRlBNUGdCMWlZRUh1ZkUzR1BvQSt4SkROemxaUHpKNEFmSUlBVCtFSDhTREg2QVRPa2hFSHZ3Qmo4QXJlV0dRTnhCRy93QVBDUXRCR0lPMXVBSDRCSXBJYkQ5UVJyOEFMekU3aUd3N2NFWi9BQWNZZGNRZUQxN0FUMFkvZ0FjWmRlWnNsWFY3UHFIQkVBTk8rMEdiSEVndXcvK1gzNzY0WnZaYXdDNHhyZmZmZi9iN0RYMHRFTUlMSDhBdXd4L1F4NUlzVXNjckI0QlN5OSsxZUYvN2JEZjVTOExrQ1BsT3JkeUJDeTU4TlVHL3lWL0VWWjk4UU5jYThkcjRvb2hzTnlDVnhqK3o3MjRWM3RoQS9TMnczVnp0UWhZYXJHVmgvOVRMOTRWWHJnQWxheDZUVjBwQXBaWTZJcUR2L0lMRkdBbEsxNW5Wd2lCOGd1c09QeFhmREVDN0dDbDYyLzFDQ2k5dUdyRC82RVhYc1VYSFVDQ0ZhN0psU09nN01JcURmOFZYbVFBcWFwZm82dEdRTWxGVlJuKzkxOVVsVjVRQVB4ZDFldDJ4UWdvdDZBS3c3L3FDd2lBeTFTOGpsZUxnREtMTWZnQk9GckY2M3FWRUNpeGlObkR2K0lMQklEalZMdk9WNGlBNlF1b05QeG52eUFBNkt2U05YOTJCRXo5NVRPSGY3VWFCR0NNU3RmL21SRXc3UmRYR2Y0R1AwQ21Lck5nVmdSRUJVQ1ZQMndBNnBnOUcyWUZ3T3NadjlUd0I2Q0s4NWx3eVQ5VmZMUlpPK0xEQThEd0I2Q2F4QWdZdXUwdytnQU5mZ0N1TlhOMmpMd2RNR3dId1BBSFlBVXpkd05HenNvaEFXRDRBN0NTaEFqb3Z0VXdhL2diL0FBY1lkWmM2WDA3WUpzQThLNGZnRjVtekpqZUFkRDFGb0RoRDhBT1p0d1M2RDFEdXdXQTRRL0FUbmFMZ0M0QllQZ0RzS09kSW1ES053RWV3ZkFIWUliWlh4cDBsTU1EWU1TN2Y4TWZnSmxHUjBDUDJYcG9BQmorQUtSWVBRSU9Dd0RESDRBMEswZkFNczhBR1A0QVZMVHFNd0dIQk1ESWIvc3ovQUdvWnVSc09tcm1MckVENE90OUFhanVOS05XMlFXNE9RQjZ2L3MzL0FGWXhhZ0lPR0wyM2hRQWhqOEEzTFZLQkpTOUJiREtGZ29BUEtieUxIdHhBSXg2OE0rN2Z3QldNMnAyM1RLTFMrNEEyUG9IWUhYVkh3cDhVUUQwZlBkditBT3dpeEVSOE5LWlhHb0hvR29sQWNDdHFzMjRxd05neEwxLzcvNEIyTVdJbWZhUzJWeG1COERXUHdDN3F2Zzh3RlVCME92ZHYrRVB3TzU2UjhDMU03ck1EZ0FBTU03RkFlRGRQd0RjcHRJdXdOUWRnRXIzUWdCZ3BOa3o4S0lBNlAza3YzZi9BS1RvUGZNdW5kblRkZ0JzL1FPUXFzS25BcDROZ0ZIZitROEFIT09TMlQxbEI4Qzdmd0RTemQ0RjhERkFBQWowWkFEMDJQNzM3aDhBL3RCekYrQzVHVzRIQUFBQ1BSb0EzdjBEUUgremRnSHNBQUJBb0dFQjROMC9BRHhzeGljQzNqejBIMzMySDRDbi9QYy8vM3IyLy9uSFAvODlZQ1U4NSsyNzk3Ly8rdk9Qcis3Lzl3Y0Q0R2l6dis4WWdOdGRNdlFmKy8vRndPVisrZW1IYjBic2xnOEpnQlBiL3dEcnVYYndQL1V6aE1EanZ2M3UrOSttM2dLdy9ROUFhOGNNL3NkK3BoQVk2NkhiQU4wZkF2VHdIOEI2ZWd6L2tUOS9WU01mQnZReFFBRHVHRFdjUmNCY1hRUEF3MzhBYXhrOWxFWEE0M3JQMERzQjBPdit2KzEvZ1BwbURXTVJjRmV2bVhsL3hyc0ZBTUQwSVR6Nzl5ZnFGZ0MyL3dIV1VHWDRWbGxISlQxbmFmY2RBTnYvQUhDZEViUHpyd0R3K1grQVBOWGVkVmRiejI3T1o3MW5BQUFnVUpjQThPVS9BUFZWZmJkZGRWMmo5ZjVTSURzQUFCQklBQUJBb05ldGVRQVFJRTMxYmZicTYxdlphZVlmdmdQZy9qOEFIS1BuY3dCdUFRQkFJQUVBQUlFRUFBQUVFZ0FBRU9qUUFQQUFJQUFjcTllRGdIWUFBQ0RRYTk4QkFBQlozcjU3LzdzZEFJQkEvL2pudjJjdjRVblYxN2NEQVFBQWdRUUFBQVFTQUFDaHFtNnpWMTNYYmc0TEFCOEJCSUErZW53VTBBNEFRTEJxNzdhcnJXZG5BZ0FBQWdrQWdIQlYzblZYV1VjS0FRREE5T0U3Ky9jbkVnQUF0TmJtRFdIRGZ3NEJBTUJmUmc5anczOGVBUURBSGFPR3N1RS9sd0FBNEc5NkQyZkRmNzQzc3hjQVFFMm5JZjNmLy96cjhKL0pmQUlBZ0NjZEVRSUdmejBDQUlDTG5BL3hTMkxBMEs5TkFBQndOY045ZlI0Q0JJQkFBZ0FBQWdrQUFBZ2tBQUFna0FBQWdFQUNBQUFDQ1FBQUNDUUFBQ0NRQUFDQVFBSUFBQUlKQUFBSUpBQUFJSkIvREFpQTl1WHpoOWxMYUI4L2ZaMjloQ2dDQUNCVWhhRi83bnc5WXFBL3R3QUFBbFViL3ZkVlg5OE83QUFBQkZscHNKN1dhamVnRHpzQUFDRldHdjduVmwxM2RRSUFJTURxUTNUMTlWY2tBQUFna0FBQTJOd3U3NTUzT1k0cUJBREF4bllibXJzZHowd0NBQUFDQ1FBQUNDUUFBRGExNjNiNXJzYzFtZ0FBZ0VBQ0FBQUNDUUFBQ0NRQUFDQ1FBQUNBUUFJQUFBSUpBQUFJSkFBQUlKQUFBSUJBQWdBQUFna0FBQWdrQUFBZ2tBQUFnRUFDQUFBQ0NRQUFDQ1FBQUNDUUFBQ0FRQUlBQUFJSkFBQUlKQUFBSUpBQUFJQkFBZ0FBQWdrQUFBZ2tBQUFna0FBQWdFQUNBQUFDQ1FBQUNDUUFBQ0NRQUFDQVFBSUFBQUlKQUFBSUpBQUFJSkFBQUlCQUFnQUFBZ2tBQUFna0FBQWdrQUFBZ0VBQ0FBQUNDUUFBQ0NRQUFDQ1FBQUNBUUFJQUFBSUpBQUFJSkFBQUlKQUFBSUJBQWdBQUFna0FBQWdrQUFBZzBKdlpDd0E0d3BmUEgyWXZvWDM4OUhYMkV1QmlBZ0JZVm9XaGYrNThQV0tBNnR3Q0FKWlViZmpmVjMxOVlBY0FXTXBLZy9XMFZyc0JWR1FIQUZqR1NzUC8zS3JyWm04Q0FGakM2a04wOWZXekh3RUFBSUVFQUZEZUx1K2VkemtPOWlBQWdOSjJHNXE3SFEvckVnQUFFRWdBQUVBZ0FRQ1V0ZXQyK2E3SHhWb0VBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVPak43QVVBZi9qeStjUHNKYlNQbjc3T1hnSXdpQUNBaVNvTS9YUG42eEVEc0RlM0FHQ1Nhc1AvdnVyckEyNWpCd0FHVzJtd250WnFOd0QyWXdjQUJscHArSjliZGQzQTR3UUFETEw2RUYxOS9jQmRBZ0FBQWdrQUdHQ1hkOCs3SEFjZ0FLQzczWWJtYnNjRHFRUUFBQVFTQUFBUVNBQkFSN3R1bCs5NlhKQkVBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJSGV6RjRBKy9qeStjUHNKYlNQbjc3T1hnTEFFZ1FBTjZrdzlNK2RyMGNNQUR6T0xRQmVyTnJ3djYvNitnQm1zZ1BBMVZZYXJLZTEyZzBBdU1zT0FGZFphZmlmVzNYZEFMMElBQzYyK2hCZGZmMEFSeElBQUJCSUFIQ1JYZDQ5NzNJY0FMY1NBRHhydDZHNTIvRUF2SVFBQUlCQUFnQUFBZ2tBbnJUcmR2bXV4d1Z3S1FFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQndKTStmdm82ZXdsZGpEb3U1MitOM3pPYTgzZWJYWTlyTkFFQUFJRUVBQUFFRWdBOGE3ZnR0dEhINC95dDlmdDZjLzV1czl2eHpDUUF1TWd1ZitsbUhZZnp0K2J2UFpyemQ1dGRqcU1LQVFBQWdRUUFGMXU5dm1ldmYvYnZ2OVhzOWMvKy9iZWF2Zjdadi85V3E2Ky9JZ0hBVlZiOVMxaGwzVlhXY2EwcTY2NnlqbXRWV1hlVmRWeHIxWFZYOStydHUvZS9IL0dEZnZucGgyOWFhKzNiNzc3LzdZaWZSMzFmUG4rWXZZUm5WYjV3T0grM2NmNXU0L3l0NStnNWF3ZUFGNnYrbDlQNmJtTjl0N0crMjFSZjN3N3NBSENZQ3U4b1ZyNW9PSCszY2Y1dTQvelZkL1NjRlFBQXNBQzNBQUNBbXdrQUFBZ2tBQUFna0FBQWdFQUNBQUFDQ1FBQUNDUUFBQ0NRQUFDQVFBSUFBQUlKQUFBSUpBQUFJSkFBQUlCQUFnQUFBZ2tBQUFna0FBQWdrQUFBZ0VBQ0FBQUNDUUFBQ0NRQUFDQ1FBQUNBUUFJQUFBSUpBQUFJSkFBQUlKQUFBSUJBQWdBQUFoMFdBTjkrOS8xdnJiWDJ5MDgvZkhQVXp3UUEvajliVDdQMkNIWUFBQ0NRQUFDQVFBSUFBQUlKQUFBSTlQclhuMzk4TlhzUkFNQTR2Lzc4NHlzN0FBQVE2TkFBOEZGQUFEaFdqNDhBdHVZWkFBQ0lKQUFBSUpBQUFJQkFBZ0FBQWgwZUFCNEVCSUJqOUhvQXNMVS9BOEIzQVFCQWh0UE1kd3NBQUFJSkFBQUkxQ1VBUEFjQUFMZnBlZisvTlRzQUFCRHByd0R3SUNBQTdPMTgxbmZmQVhBYkFBQ3VNMkoyZGd1QVh2Y3NBQ0JGejFucUdRQUFDSFFuQUhvOUIrQTJBQUJjcHRmTXZEL2p1KzRBdUEwQUFDL1RlNGE2QlFBQWdib0hnQzhGQW9ETDlQN3luM04vQ3dEZkJ3QUFlM2xvdGcrOUJXQVhBQUFlTm5wR0Rna0FEd01Dd0dWR3pjd0hBOEJ0QUFEWXcyTXpmZGd0QUE4REFzRERSajc4ZCtKamdBQVE2TkVBNkhFYndDNEFBTnpWODkzL1U3UGNEZ0FBQkhveUFPd0NBRUEvczk3OXQyWUhBQUFpVFFrQXV3QUFwSnZ4NVArNVp3UEFkd0lBd0ZvdW1kM1RiZ0hZQlFBZzFleDMvNjFkR0FDOWR3RkVBQUFwZXMrOFMyZjIxSWNBL1JzQkFLU2FQUU12RG9CZXV3QnVCUUNRb3ZmVy96V3oyc2NBQVNEUVZRRmdGd0FBWHFiU3UvL1dDdTBBaUFBQWRsWGhxZi83cmc2QUVkOExJQUlBMk1XSW1mYVMyVnhtQjZDMVdtVUVBRWVxTnVOZUZBQTlkd0hjQ2dCZ0Z5TzIvbDg2azB2dEFKeUlBQUJXVi9HKy83a1hCOENvZnlOQUJBQ3dtbEd6NjVaWlhISUhvTFc2eFFRQWw2bzh5MjRLZ042N0FHNEZBTENhVVZ2L3Q4N2dtM2NBUkFBQS9HR1Y0ZDlhNFZzQTUwUUFBTlZWZitqdnZrTUNZTlFEZ2EySkFBRHFHVG1ianBxNVMrd0F0SGEzcUVRQUFGV2N6NlJWM3YyM2RtQUFqTmdGRUFFQVZESjYrQjg1YXcvZEFSQUJBS1JZZWZpMzF1RVdnQWdBWUhlckQvL1dGbm9HNEQ0UkFNQU1xOTd6djY5TEFJejZWSUFJQUdDa0djTy8xMHp0dGdNZ0FnRFl5VTdEdjdYT3R3QkVBQUE3MkczNHQ5WmE5d0g5OXQzNzMzdi9qbk9yZlJNVEFMWE5taXZMQjBCcjh5S2dOU0VBd012TW5DVWpkdENIZkFwZzVGY0Z0K2FXQUFDMzJYMzR0emJ3WTRBaUFJQVZKQXovMWdiZEFqZzMrblpBYTI0SkFQQzgyYk5pOUJ2bDRWOEVOUG9BVzdNYkFNRFQwb1ovYTVPK0NWQUVBRkJGNHZCdmJjSXRnSk1adHdKT1p2OWhBekJmbFZrUUZ3Q3QxWW1BMW9RQVFJcEsxLzladzcrMXlRSFEydHdJYUsxT0FRTFFYNlZyL3N6aDMxcUJBR2l0VmdTME52OUZBY0N4cWwzblp3Ly8xb29FUUd2ekk2QzFlaThRQUc1VDhicGVZZmkzVmlnQVRvUUFBTGVxZUIydk12aFBTaTNtcEVJRXRGYnpCUVRBNDZwZXQ2c04vOWFLQmtCcmRTS2d0WWUvTjZES2l3b2dYZlZyZE1YaDMxcmhBR2l0VmdTMFZ2OUZCcEJraFd0eTFlSGZXdkVBYUsxZUJMVDIrRGNKVm52aEFleG1wZXR2NWVIZjJnSUIwRnJOQ0RoWjZjVUlzS0lWcjdQVmgzOXJpd1RBeVlvaDBGcnRGeWxBUmF0ZVUxY1kvQ2ZMTFBTa2NnU2NQUGVQRFZWKzhRTE1zTU4xYzZYaDM5cUNBZERhR2hGdzdwSi9mWENGRnpmQUVYYThKcTQyL0Z0Yk5BQk9WZ3VCazJ2L09lTFYvaUlBcEZ6blZoejhKOHN1L0dUVkNManYycjhzQUt0YWRkamZ0L0x3YjIyREFHaHRud2g0akRnQVZyUExrSC9NNnNPL3RVMEM0R1QzRUFCZ3JoMEcvOGsyQjNKT0NBQndwSjBHLzhucjJRdm9ZY2MvS0FEbTJIV21iSGxRNSt3R0FQQVN1dzcrazYwUDdwd1FBT0FTdXcvK2s0aURQQ2NFQUhoSXl1QS9pVHJZYzBJQWdOYnlCdjlKNUVHZkV3SUFtVklILzBuMHdaOFRBZ0FaMGdmL2laTndqeEFBMkpQQmY1ZVQ4UVF4QUxBMlEvOXhUc3dGaEFEQVdneis1emxCVnhJREFEVVordGR4c200Z0JnRG1NdlJmem9rN2tDQUE2TXZBUDQ0VDJaRWdBTGlOZ2QrUEV6dVlLQUI0bUdFL2xwTmRqRUFBZG1YQTEvSS9USS9xVHNJcFVkNEFBQUFBU1VWT1JLNUNZSUk9IiwgInNpemVzIjogIjUxMng1MTIiLCAidHlwZSI6ICJpbWFnZS9wbmcifV19">
+<link rel="icon" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<meta name="theme-color" content="#F7F3EC">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Финансы">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<style>
+:root{
+  --bg:#F7F3EC;
+  --surface:#FFFFFF;
+  --surface-2:#F1EBDD;
+  --surface-3:#E8DFCB;
+  --border:#DED2B4;
+  --border-soft:#EAE1CC;
+  --text:#2B2620;
+  --text-dim:#726A5A;
+  --text-faint:#A79C86;
+  --accent:#3F6B54;
+  --accent-soft:#E7F0EA;
+  --accent-ink:#FFFFFF;
+  --income:#3F6B54;
+  --income-ink:#E7F0EA;
+  --expense:#B4562F;
+  --expense-ink:#F8E9DF;
+  --moto:#8B6F47;
+  --health:#4E7A93;
+  --household:#C08A3E;
+  --radius:14px;
+  --font-display:'Fraunces',serif;
+  --font-body:'Inter',sans-serif;
+  --font-mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box;}
+html{overflow-x:hidden;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-body);overflow-x:hidden;width:100%;}
+button{font-family:inherit;}
+input,select,textarea{font-family:inherit;}
+::selection{background:var(--accent);color:#fff;}
+.icon{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}
+#app{display:flex;min-height:100vh;}
+#sidebar{width:230px;flex-shrink:0;background:var(--surface);border-right:1px solid var(--border-soft);display:flex;flex-direction:column;padding:26px 16px;position:sticky;top:0;height:100vh;}
+.brand{padding:0 6px 22px;border-bottom:1px solid var(--border-soft);margin-bottom:18px;}
+.brand-name{font-family:var(--font-display);font-weight:600;font-size:22px;letter-spacing:0.2px;display:flex;align-items:center;gap:9px;color:var(--text);}
+.brand-dot{width:9px;height:9px;border-radius:50%;background:var(--accent);flex-shrink:0;}
+.brand-sub{font-size:11px;color:var(--text-faint);text-transform:uppercase;letter-spacing:1.5px;margin-top:5px;padding-left:18px;}
+.nav-item{display:flex;align-items:center;gap:11px;padding:11px 12px;border-radius:10px;color:var(--text-dim);cursor:pointer;font-size:14px;font-weight:500;margin-bottom:3px;border:1px solid transparent;background:none;width:100%;text-align:left;}
+.nav-item:hover{background:var(--surface-2);color:var(--text);}
+.nav-item.active{background:var(--accent-soft);color:var(--accent);border-color:var(--accent);}
+#main{flex:1;min-width:0;padding:30px 34px 110px;max-width:1160px;}
+.page-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px;flex-wrap:wrap;}
+.page-title{font-family:var(--font-display);font-size:26px;font-weight:600;color:var(--text);}
+.page-sub{font-size:13px;color:var(--text-faint);margin-top:2px;}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:10px 16px;border-radius:10px;border:1px solid var(--border);background:var(--surface-2);color:var(--text);font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap;}
+.btn:hover{background:var(--surface-3);}
+.btn-accent{background:var(--accent);border-color:var(--accent);color:#fff;}
+.btn-accent:hover{background:#345943;}
+.btn-ghost{background:none;border-color:transparent;color:var(--text-dim);padding:6px 8px;}
+.btn-ghost:hover{background:var(--surface-2);color:var(--text);}
+.btn-danger{color:var(--expense);}
+input[type=text],input[type=number],input[type=date],select,textarea{width:100%;background:var(--surface-2);border:1px solid var(--border);color:var(--text);padding:10px 12px;border-radius:9px;font-size:14px;}
+input[type=number]{-moz-appearance:textfield;appearance:textfield;}
+input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0;}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);}
+textarea{resize:vertical;min-height:70px;}
+label{display:block;font-size:12px;color:var(--text-dim);margin:0 0 6px;text-transform:uppercase;letter-spacing:0.5px;}
+.field{margin-bottom:14px;}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.checkbox-row{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.checkbox-row input[type=checkbox]{width:18px;height:18px;accent-color:var(--accent);flex-shrink:0;}
+.checkbox-row label{margin:0;text-transform:none;font-size:14px;color:var(--text);letter-spacing:0;}
+
+/* Dashboard */
+.gauge-panel{background:var(--surface);border:1px solid var(--border-soft);border-radius:16px;padding:28px 26px;margin-bottom:24px;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px;}
+.gauge{display:flex;flex-direction:column;justify-content:center;}
+.gauge-label{font-size:11px;color:var(--text-faint);text-transform:uppercase;letter-spacing:2px;margin-bottom:6px;}
+.gauge-value{font-family:var(--font-mono);font-weight:700;font-variant-numeric:tabular-nums;line-height:1;}
+.gauge.big .gauge-value{font-size:40px;color:var(--accent);}
+.gauge.income .gauge-value{font-size:24px;color:var(--income);}
+.gauge.expense .gauge-value{font-size:24px;color:var(--expense);}
+.gauge-sep{width:1px;background:var(--border-soft);}
+.charts-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px;}
+.chart-card{background:var(--surface);border:1px solid var(--border-soft);border-radius:16px;padding:22px;}
+.chart-card h3{font-family:var(--font-display);font-size:16px;font-weight:600;margin:0 0 16px;color:var(--text);}
+.legend-row{display:flex;align-items:center;justify-content:space-between;font-size:13px;padding:6px 0;border-bottom:1px solid var(--border-soft);}
+.legend-row:last-child{border-bottom:none;}
+.legend-left{display:flex;align-items:center;gap:8px;color:var(--text-dim);}
+.legend-dot{width:9px;height:9px;border-radius:3px;flex-shrink:0;}
+.legend-amt{font-family:var(--font-mono);font-weight:600;color:var(--text);}
+.recent-card{background:var(--surface);border:1px solid var(--border-soft);border-radius:16px;padding:22px;}
+.recent-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border-soft);}
+.recent-row:last-child{border-bottom:none;}
+.recent-badge{width:32px;height:32px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.recent-badge.income{background:var(--income-ink);color:var(--income);}
+.recent-badge.expense{background:var(--expense-ink);color:var(--expense);}
+.recent-mid{flex:1;min-width:0;}
+.recent-title{font-size:14px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.recent-sub{font-size:12px;color:var(--text-faint);}
+.recent-amt{font-family:var(--font-mono);font-weight:700;font-size:14px;white-space:nowrap;}
+.recent-amt.income{color:var(--income);}
+.recent-amt.expense{color:var(--expense);}
+.empty-state{text-align:center;padding:60px 20px;color:var(--text-faint);}
+.empty-state .icon{width:36px;height:36px;margin-bottom:10px;opacity:0.5;}
+
+/* Subtabs (Мотоцикл) */
+.subtabs{display:flex;gap:8px;margin-bottom:20px;}
+.subtab-btn{padding:9px 16px;border-radius:9px;border:1px solid var(--border);background:var(--surface-2);color:var(--text-dim);font-size:13.5px;font-weight:600;cursor:pointer;}
+.subtab-btn.active{background:var(--accent);border-color:var(--accent);color:#fff;}
+
+/* Stat row */
+.stat-row{display:flex;gap:16px;margin-bottom:22px;flex-wrap:wrap;}
+.stat-box{background:var(--surface);border:1px solid var(--border-soft);border-radius:14px;padding:16px 20px;flex:1;min-width:150px;}
+.stat-box-label{font-size:11px;color:var(--text-faint);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;}
+.stat-box-value{font-family:var(--font-mono);font-weight:700;font-size:22px;color:var(--text);}
+
+/* Tickets */
+.ticket-list{display:flex;flex-direction:column;gap:12px;}
+.ticket{background:var(--surface);border:1px solid var(--border-soft);border-radius:12px;padding:14px 16px;position:relative;}
+.ticket-head{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.badge{font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:0.3px;}
+.ticket-date{font-size:12px;color:var(--text-dim);margin-left:auto;}
+.ticket-div{border-top:1px dashed var(--border);margin:8px 0;}
+.ticket-body{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;}
+.ticket-desc{font-size:14px;line-height:1.4;color:var(--text-dim);}
+.ticket-amt{font-family:var(--font-mono);font-weight:700;font-size:18px;white-space:nowrap;}
+.ticket-actions{display:flex;gap:2px;flex-shrink:0;}
+.ticket-mileage{font-family:var(--font-mono);font-size:13px;color:var(--text-dim);margin-bottom:4px;}
+
+/* Modal */
+#overlay{position:fixed;inset:0;background:rgba(43,38,32,0.55);display:none;align-items:flex-end;justify-content:center;z-index:100;}
+#overlay.show{display:flex;}
+.modal{background:var(--surface);width:100%;max-width:460px;border-radius:18px 18px 0 0;padding:24px 22px 26px;max-height:88vh;overflow-y:auto;border:1px solid var(--border);border-bottom:none;}
+@media(min-width:640px){#overlay{align-items:center;}.modal{border-radius:18px;border-bottom:1px solid var(--border);}}
+.modal-title{font-family:var(--font-display);font-size:20px;font-weight:600;margin:0 0 18px;display:flex;justify-content:space-between;align-items:center;color:var(--text);}
+.modal-actions{display:flex;gap:10px;margin-top:18px;}
+.modal-actions .btn{flex:1;justify-content:center;}
+
+/* Mobile nav */
+#mobilenav{display:none;}
+.fab{position:fixed;bottom:24px;right:20px;width:60px;height:60px;border-radius:50%;background:var(--accent);color:#fff;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:55;box-shadow:0 8px 20px rgba(63,107,84,0.35);}
+.fab .icon{width:26px;height:26px;stroke-width:2.2;}
+
+/* Lock screen */
+#lock-screen{position:fixed;inset:0;background:var(--bg);display:none;align-items:center;justify-content:center;z-index:200;flex-direction:column;padding:20px;}
+.lock-box{width:100%;max-width:320px;text-align:center;}
+.lock-icon{width:46px;height:46px;color:var(--accent);margin:0 auto 18px;}
+.lock-title{font-family:var(--font-display);font-size:22px;font-weight:600;margin-bottom:6px;}
+.lock-sub{font-size:13px;color:var(--text-faint);margin-bottom:22px;}
+#lock-input{text-align:center;font-size:18px;letter-spacing:2px;margin-bottom:14px;}
+#lock-error{display:none;color:var(--expense);font-size:13px;margin-bottom:12px;}
+#lock-btn{width:100%;justify-content:center;padding:12px;}
+
+/* Storage warning */
+#storage-banner{display:none;align-items:center;gap:10px;background:var(--expense-ink);color:var(--expense);border:1px solid var(--expense);padding:12px 16px;border-radius:12px;font-size:13px;margin-bottom:20px;}
+
+@media(max-width:880px){
+  #sidebar{display:none;}
+  #main{padding:20px 16px 100px;}
+  #mobilenav{display:flex;position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:1px solid var(--border-soft);z-index:40;padding:6px 2px calc(6px + env(safe-area-inset-bottom));}
+  .mnav-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 1px;color:var(--text-faint);background:none;border:none;font-size:9.5px;font-weight:600;text-transform:uppercase;letter-spacing:0.2px;}
+  .mnav-item.active{color:var(--accent);}
+  .fab{bottom:78px;}
+  .gauge-panel{grid-template-columns:1fr;gap:14px;text-align:left;}
+  .gauge-sep{display:none;}
+  .charts-grid{grid-template-columns:1fr;}
+  .field-row{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<div id="lock-screen">
+  <div class="lock-box">
+    <svg class="lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+    <div class="lock-title">Мои финансы</div>
+    <div class="lock-sub">Введите пароль для доступа</div>
+    <input type="password" id="lock-input" placeholder="••••••">
+    <div id="lock-error">Неверный пароль</div>
+    <button class="btn btn-accent" id="lock-btn">Войти</button>
+  </div>
+</div>
+
+<div id="app">
+  <div id="sidebar">
+    <div class="brand">
+      <div class="brand-name"><span class="brand-dot"></span>Мои финансы</div>
+      <div class="brand-sub">личный учёт</div>
+    </div>
+    <div id="nav-items"></div>
+  </div>
+  <div id="main"></div>
+</div>
+
+<div id="mobilenav"></div>
+<button class="fab" id="fab" style="display:none;">
+  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+</button>
+
+<div id="overlay"><div class="modal" id="modal-content"></div></div>
+
+<script>
+/* ==== ИКОНКИ ==== */
+const ICONS = {
+  home:'<path d="M3 3v18h18"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path>',
+  income:'<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline>',
+  expense:'<polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline><polyline points="17 18 23 18 23 12"></polyline>',
+  moto:'<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76Z"></path>',
+  health:'<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8Z"></path>',
+  household:'<path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path>',
+  settings:'<line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line>',
+  plus:'<line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>',
+  edit:'<path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path>',
+  trash:'<polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"></path>',
+  download:'<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line>',
+  upload:'<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line>',
+  gauge:'<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>',
+  close:'<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>',
+  wallet:'<path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"></path><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"></path>',
+  empty:'<circle cx="12" cy="12" r="9"></circle><line x1="9" y1="12" x2="15" y2="12"></line>'
+};
+function icon(name,cls){return `<svg class="icon ${cls||''}" viewBox="0 0 24 24" fill="none" stroke="currentColor">${ICONS[name]||''}</svg>`;}
+
+/* ==== КОНФИГУРАЦИЯ КАТЕГОРИЙ ==== */
+const GROUPS = {
+  moto:{label:'Мотоцикл', icon:'moto', color:'#8B6F47', subcats:['Бензин','Обслуживание','Запчасти']},
+  health:{label:'Здоровье', icon:'health', color:'#4E7A93', subcats:['Врачи','Лекарства','Спорт','Страховка']},
+  household:{label:'Быт', icon:'household', color:'#C08A3E', subcats:['Продукты и бытовая химия','Развлечения','Алкоголь','Сигареты','Одежда']}
+};
+const SUBCAT_COLORS = {
+  'Бензин':'#8B6F47','Обслуживание':'#B08A5A','Запчасти':'#D8B98A',
+  'Врачи':'#4E7A93','Лекарства':'#7AA0B4','Спорт':'#3F6B54','Страховка':'#9DB8C4',
+  'Продукты и бытовая химия':'#C08A3E','Развлечения':'#D6A85E','Алкоголь':'#B4562F','Сигареты':'#8C7361','Одежда':'#CDB392'
+};
+
+const NAV_ITEMS = [
+  {id:'dashboard', label:'Сводка', icon:'home'},
+  {id:'income', label:'Доходы', icon:'income'},
+  {id:'moto', label:'Мотоцикл', icon:'moto'},
+  {id:'health', label:'Здоровье', icon:'health'},
+  {id:'household', label:'Быт', icon:'household'},
+  {id:'settings', label:'Настройки', icon:'settings'}
+];
+
+/* ==== СОСТОЯНИЕ ==== */
+let incomes = [];
+let expenses = [];
+let maintenance = [];
+let startBalance = 0;
+let currentView = 'dashboard';
+let motoSubview = 'expenses';
+let dashChart = null, groupChart = null;
+
+function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,8);}
+function todayISO(){return new Date().toISOString().slice(0,10);}
+function fmtDate(iso){if(!iso)return'';const[y,m,d]=iso.split('-');return d+'.'+m+'.'+y;}
+function money(n){n=n||0;return (Math.round(n*100)/100).toLocaleString('ru-RU',{minimumFractionDigits:2,maximumFractionDigits:2})+' ₾';}
+function monthKey(iso){return iso?iso.slice(0,7):'';}
+
+/* ==== ХРАНИЛИЩЕ ДАННЫХ (Firebase) ==== */
+const FIREBASE_CONFIG = {
+  apiKey: "AIzaSyBfcpVTQkt7-4b7PyTTDUus_OfNlGZLVJQ",
+  authDomain: "financetracker-a940d.firebaseapp.com",
+  projectId: "financetracker-a940d",
+  storageBucket: "financetracker-a940d.firebasestorage.app",
+  messagingSenderId: "123463877726",
+  appId: "1:123463877726:web:870b7b0c0b10072c92e0cf"
+};
+let db = null, docRef = null, firebaseReady = false;
+try{
+  firebase.initializeApp(FIREBASE_CONFIG);
+  db = firebase.firestore();
+  docRef = db.collection('finance').doc('data');
+  firebaseReady = true;
+  console.log('%c[Финансы] Firebase подключен успешно','color:#3F6B54;font-weight:bold');
+}catch(e){
+  console.error('[Финансы] Firebase НЕ подключен:', e);
+}
+
+function showStorageWarning(){
+  const el=document.getElementById('storage-banner');
+  if(el) el.style.display='flex';
+}
+
+async function saveAll(){
+  if(!firebaseReady){console.warn('[Финансы] Сохранение пропущено — Firebase не подключен');showStorageWarning();return;}
+  try{
+    await docRef.set({startBalance,incomes,expenses,maintenance});
+    console.log('%c[Финансы] Сохранено ✓','color:#3F6B54;font-weight:bold');
+  }catch(e){
+    console.error('[Финансы] Ошибка сохранения:', e);
+    showStorageWarning();
+  }
+}
+
+async function loadAll(){
+  if(!firebaseReady){showStorageWarning();return;}
+  try{
+    const snap = await docRef.get();
+    if(snap.exists){
+      const d = snap.data();
+      startBalance = d.startBalance||0;
+      incomes = d.incomes||[];
+      expenses = d.expenses||[];
+      maintenance = d.maintenance||[];
+      console.log('%c[Финансы] Загружено ✓','color:#3F6B54;font-weight:bold');
+    } else {
+      await saveAll();
+    }
+  }catch(e){
+    console.error('[Финансы] Ошибка загрузки:', e);
+    showStorageWarning();
+  }
+}
+
+/* ==== ВЫЧИСЛЕНИЯ ==== */
+function totalIncome(){return incomes.reduce((s,i)=>s+i.amount,0);}
+function totalExpense(){return expenses.reduce((s,e)=>s+e.amount,0);}
+function currentBalance(){return startBalance+totalIncome()-totalExpense();}
+function thisMonthIncome(){const m=monthKey(todayISO());return incomes.filter(i=>monthKey(i.date)===m).reduce((s,i)=>s+i.amount,0);}
+function thisMonthExpense(){const m=monthKey(todayISO());return expenses.filter(e=>monthKey(e.date)===m).reduce((s,e)=>s+e.amount,0);}
+function groupTotal(g){return expenses.filter(e=>e.group===g).reduce((s,e)=>s+e.amount,0);}
+function subcatTotals(g){const t={};GROUPS[g].subcats.forEach(s=>t[s]=0);expenses.filter(e=>e.group===g).forEach(e=>{t[e.subcat]=(t[e.subcat]||0)+e.amount;});return t;}
+function lastMileage(){if(!maintenance.length)return null;return maintenance.reduce((max,m)=>Math.max(max,m.mileage||0),0);}
+
+/* ==== НАВИГАЦИЯ ==== */
+function renderNav(){
+  const sideHtml = NAV_ITEMS.map(n=>`
+    <button class="nav-item ${currentView===n.id?'active':''}" data-nav="${n.id}">
+      ${icon(n.icon)}<span>${n.label}</span>
+    </button>`).join('');
+  document.getElementById('nav-items').innerHTML = sideHtml;
+  document.querySelectorAll('[data-nav]').forEach(el=>{
+    el.onclick=()=>{currentView=el.dataset.nav;renderNav();renderView();};
+  });
+
+  const mobHtml = NAV_ITEMS.map(n=>`
+    <button class="mnav-item ${currentView===n.id?'active':''}" data-nav="${n.id}">
+      ${icon(n.icon)}<span>${n.label}</span>
+    </button>`).join('');
+  document.getElementById('mobilenav').innerHTML = mobHtml;
+  document.querySelectorAll('#mobilenav [data-nav]').forEach(el=>{
+    el.onclick=()=>{currentView=el.dataset.nav;renderNav();renderView();};
+  });
+}
+
+/* ==== МОДАЛКИ ==== */
+function openModal(title, bodyHtml){
+  document.getElementById('modal-content').innerHTML = `
+    <div class="modal-title">${title}<button class="btn-ghost" id="m-close" style="background:none;border:none;cursor:pointer;display:flex;">${icon('close')}</button></div>
+    ${bodyHtml}`;
+  const overlay = document.getElementById('overlay');
+  overlay.classList.add('show');
+  document.getElementById('m-close').onclick=closeModal;
+  overlay.onclick=(e)=>{if(e.target===overlay)closeModal();};
+}
+function closeModal(){document.getElementById('overlay').classList.remove('show');}
+
+function openIncomeModal(item){
+  const editing = !!item;
+  const it = item || {date:todayISO(),amount:'',source:'',note:''};
+  openModal(editing?'Изменить доход':'Новый доход', `
+    <div class="field"><label>Дата</label><input type="date" id="f-date" value="${it.date}"></div>
+    <div class="field"><label>Сумма (₾)</label><input type="number" id="f-amount" step="0.01" value="${it.amount}"></div>
+    <div class="field"><label>Источник</label><input type="text" id="f-source" value="${it.source||''}" placeholder="Зарплата, подработка..."></div>
+    <div class="field"><label>Заметка</label><textarea id="f-note">${it.note||''}</textarea></div>
+    <div class="modal-actions">
+      <button class="btn" id="m-cancel">Отмена</button>
+      <button class="btn btn-accent" id="m-save">Сохранить</button>
+      ${editing?`<button class="btn btn-danger" id="m-delete">${icon('trash')}</button>`:''}
+    </div>`);
+  document.getElementById('m-cancel').onclick=closeModal;
+  if(editing) document.getElementById('m-delete').onclick=async()=>{
+    incomes = incomes.filter(x=>x.id!==item.id);
+    await saveAll(); closeModal(); renderView();
+  };
+  document.getElementById('m-save').onclick=async()=>{
+    const amount=Number(document.getElementById('f-amount').value);
+    if(!amount||amount<=0){document.getElementById('f-amount').style.borderColor='var(--expense)';return;}
+    const data={date:document.getElementById('f-date').value||todayISO(),amount,source:document.getElementById('f-source').value.trim(),note:document.getElementById('f-note').value.trim()};
+    if(editing){Object.assign(item,data);}else{incomes.push({id:uid(),...data});}
+    await saveAll(); closeModal(); renderView();
+  };
+}
+
+function openExpenseModal(group, item){
+  const editing = !!item;
+  const g = GROUPS[group];
+  const it = item || {date:todayISO(),amount:'',subcat:g.subcats[0],note:''};
+  openModal(editing?'Изменить расход':`Новый расход · ${g.label}`, `
+    <div class="field"><label>Дата</label><input type="date" id="f-date" value="${it.date}"></div>
+    <div class="field"><label>Категория</label><select id="f-subcat">${g.subcats.map(s=>`<option value="${s}" ${s===it.subcat?'selected':''}>${s}</option>`).join('')}</select></div>
+    <div class="field"><label>Сумма (₾)</label><input type="number" id="f-amount" step="0.01" value="${it.amount}"></div>
+    <div class="field"><label>Заметка</label><textarea id="f-note">${it.note||''}</textarea></div>
+    <div class="modal-actions">
+      <button class="btn" id="m-cancel">Отмена</button>
+      <button class="btn btn-accent" id="m-save">Сохранить</button>
+      ${editing?`<button class="btn btn-danger" id="m-delete">${icon('trash')}</button>`:''}
+    </div>`);
+  document.getElementById('m-cancel').onclick=closeModal;
+  if(editing) document.getElementById('m-delete').onclick=async()=>{
+    expenses = expenses.filter(x=>x.id!==item.id);
+    await saveAll(); closeModal(); renderView();
+  };
+  document.getElementById('m-save').onclick=async()=>{
+    const amount=Number(document.getElementById('f-amount').value);
+    if(!amount||amount<=0){document.getElementById('f-amount').style.borderColor='var(--expense)';return;}
+    const data={date:document.getElementById('f-date').value||todayISO(),group,subcat:document.getElementById('f-subcat').value,amount,note:document.getElementById('f-note').value.trim()};
+    if(editing){Object.assign(item,data);}else{expenses.push({id:uid(),...data});}
+    await saveAll(); closeModal(); renderView();
+  };
+}
+
+function openMaintenanceModal(item){
+  const editing = !!item;
+  const it = item || {date:todayISO(),mileage:lastMileage()||'',description:'',cost:''};
+  openModal(editing?'Изменить запись':'Запись о ТО', `
+    <div class="field"><label>Дата</label><input type="date" id="f-date" value="${it.date}"></div>
+    <div class="field"><label>Пробег (км)</label><input type="number" id="f-mileage" value="${it.mileage}"></div>
+    <div class="field"><label>Что сделано</label><textarea id="f-desc" placeholder="Замена масла, цепь, тормозные колодки...">${it.description||''}</textarea></div>
+    <div class="checkbox-row"><input type="checkbox" id="f-ascost" ${it.cost?'checked':''}><label for="f-ascost">Добавить также как расход (Мотоцикл → Обслуживание)</label></div>
+    <div class="field" id="f-cost-wrap" style="display:${it.cost?'block':'none'};"><label>Сумма (₾)</label><input type="number" id="f-cost" step="0.01" value="${it.cost||''}"></div>
+    <div class="modal-actions">
+      <button class="btn" id="m-cancel">Отмена</button>
+      <button class="btn btn-accent" id="m-save">Сохранить</button>
+      ${editing?`<button class="btn btn-danger" id="m-delete">${icon('trash')}</button>`:''}
+    </div>`);
+  document.getElementById('m-cancel').onclick=closeModal;
+  document.getElementById('f-ascost').onchange=(e)=>{document.getElementById('f-cost-wrap').style.display=e.target.checked?'block':'none';};
+  if(editing) document.getElementById('m-delete').onclick=async()=>{
+    maintenance = maintenance.filter(x=>x.id!==item.id);
+    if(item.linkedExpenseId) expenses = expenses.filter(x=>x.id!==item.linkedExpenseId);
+    await saveAll(); closeModal(); renderView();
+  };
+  document.getElementById('m-save').onclick=async()=>{
+    const mileage=Number(document.getElementById('f-mileage').value);
+    const description=document.getElementById('f-desc').value.trim();
+    if(!mileage||mileage<=0||!description){
+      if(!mileage||mileage<=0)document.getElementById('f-mileage').style.borderColor='var(--expense)';
+      if(!description)document.getElementById('f-desc').style.borderColor='var(--expense)';
+      return;
+    }
+    const date=document.getElementById('f-date').value||todayISO();
+    const asCost=document.getElementById('f-ascost').checked;
+    const cost=asCost?Number(document.getElementById('f-cost').value)||0:0;
+    const data={date,mileage,description,cost:asCost?cost:0};
+    if(editing){
+      if(item.linkedExpenseId){
+        if(asCost&&cost>0){const exp=expenses.find(x=>x.id===item.linkedExpenseId);if(exp)Object.assign(exp,{date,amount:cost,note:description});}
+        else{expenses=expenses.filter(x=>x.id!==item.linkedExpenseId);item.linkedExpenseId=null;}
+      }else if(asCost&&cost>0){
+        const exp={id:uid(),date,group:'moto',subcat:'Обслуживание',amount:cost,note:description};
+        expenses.push(exp);data.linkedExpenseId=exp.id;
+      }
+      Object.assign(item,data);
+    }else{
+      const rec={id:uid(),...data};
+      if(asCost&&cost>0){
+        const exp={id:uid(),date,group:'moto',subcat:'Обслуживание',amount:cost,note:description};
+        expenses.push(exp);rec.linkedExpenseId=exp.id;
+      }
+      maintenance.push(rec);
+    }
+    await saveAll(); closeModal(); renderView();
+  };
+}
+
+/* ==== ОБЩИЕ КОМПОНЕНТЫ ==== */
+function storageBannerHtml(){
+  return `<div id="storage-banner" style="display:${firebaseReady?'none':'flex'};">${icon('empty')}<span>Не удалось подключиться к хранилищу. Проверьте конфигурацию Firebase — изменения не будут сохранены.</span></div>`;
+}
+
+function ticketRow(dateStr, badgeLabel, badgeColor, desc, amount, isExpense, onEdit){
+  return `<div class="ticket">
+    <div class="ticket-head">
+      <span class="badge" style="background:${badgeColor}22;color:${badgeColor};">${badgeLabel}</span>
+      <span class="ticket-date">${fmtDate(dateStr)}</span>
+    </div>
+    <div class="ticket-div"></div>
+    <div class="ticket-body">
+      <div class="ticket-desc">${desc||'—'}</div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div class="ticket-amt" style="color:${isExpense?'var(--expense)':'var(--income)'};">${isExpense?'−':'+'}${money(amount)}</div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function legendRowsHtml(totals, colors, labels){
+  const entries = Object.entries(totals).filter(([k,v])=>v>0).sort((a,b)=>b[1]-a[1]);
+  if(!entries.length) return `<div style="color:var(--text-faint);font-size:13px;padding:10px 0;">Пока нет данных</div>`;
+  return entries.map(([k,v])=>`
+    <div class="legend-row">
+      <div class="legend-left"><span class="legend-dot" style="background:${colors[k]||'#999'};"></span>${labels?labels[k]:k}</div>
+      <div class="legend-amt">${money(v)}</div>
+    </div>`).join('');
+}
+
+/* ==== СВОДКА ==== */
+function renderDashboard(){
+  const bal=currentBalance();
+  const mi=thisMonthIncome(), me=thisMonthExpense();
+  const groupTotals={moto:groupTotal('moto'),health:groupTotal('health'),household:groupTotal('household')};
+  const groupColors={moto:GROUPS.moto.color,health:GROUPS.health.color,household:GROUPS.household.color};
+  const groupLabels={moto:'Мотоцикл',health:'Здоровье',household:'Быт'};
+
+  const recent = [
+    ...incomes.map(i=>({...i,_type:'income'})),
+    ...expenses.map(e=>({...e,_type:'expense'}))
+  ].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,10);
+
+  document.getElementById('main').innerHTML = `
+    <div class="page-head"><div><div class="page-title">Сводка</div><div class="page-sub">${new Date().toLocaleDateString('ru-RU',{month:'long',year:'numeric'})}</div></div></div>
+    ${storageBannerHtml()}
+    <div class="gauge-panel">
+      <div class="gauge big"><div class="gauge-label">${icon('wallet')} Баланс</div><div class="gauge-value">${money(bal)}</div></div>
+      <div class="gauge-sep"></div>
+      <div class="gauge income"><div class="gauge-label">Доход в этом месяце</div><div class="gauge-value">+${money(mi)}</div></div>
+      <div class="gauge expense"><div class="gauge-label">Расход в этом месяце</div><div class="gauge-value">−${money(me)}</div></div>
+    </div>
+    <div class="charts-grid">
+      <div class="chart-card">
+        <h3>Расходы по категориям</h3>
+        <canvas id="group-chart" height="180"></canvas>
+        <div style="margin-top:16px;">${legendRowsHtml(groupTotals,groupColors,groupLabels)}</div>
+      </div>
+      <div class="recent-card">
+        <h3 style="font-family:var(--font-display);font-size:16px;font-weight:600;margin:0 0 16px;">Последние операции</h3>
+        ${recent.length?recent.map(r=>`
+          <div class="recent-row">
+            <div class="recent-badge ${r._type}">${icon(r._type==='income'?'income':'expense')}</div>
+            <div class="recent-mid">
+              <div class="recent-title">${r._type==='income'?(r.source||'Доход'):(GROUPS[r.group]?.label+' · '+r.subcat)}</div>
+              <div class="recent-sub">${fmtDate(r.date)}</div>
+            </div>
+            <div class="recent-amt ${r._type}">${r._type==='income'?'+':'−'}${money(r.amount)}</div>
+          </div>`).join(''):`<div class="empty-state">${icon('empty')}<div>Пока нет операций</div></div>`}
+      </div>
+    </div>
+  `;
+  if(groupChart){groupChart.destroy();groupChart=null;}
+  const labels=Object.keys(groupTotals).filter(k=>groupTotals[k]>0).map(k=>groupLabels[k]);
+  const data=Object.keys(groupTotals).filter(k=>groupTotals[k]>0).map(k=>groupTotals[k]);
+  const colors=Object.keys(groupTotals).filter(k=>groupTotals[k]>0).map(k=>groupColors[k]);
+  const canvas=document.getElementById('group-chart');
+  if(canvas && data.length){
+    groupChart=new Chart(canvas,{type:'doughnut',data:{labels,datasets:[{data,backgroundColor:colors,borderColor:'#FFFFFF',borderWidth:3}]},
+      options:{plugins:{legend:{display:false}},cutout:'68%',responsive:true,maintainAspectRatio:true}});
+  }
+  document.getElementById('fab').style.display='none';
+}
+
+/* ==== ДОХОДЫ ==== */
+function renderIncome(){
+  const sorted=[...incomes].sort((a,b)=>b.date.localeCompare(a.date));
+  document.getElementById('main').innerHTML = `
+    <div class="page-head"><div><div class="page-title">Доходы</div><div class="page-sub">Всего: ${money(totalIncome())}</div></div>
+      <button class="btn btn-accent" id="add-income">${icon('plus')}Добавить</button></div>
+    ${storageBannerHtml()}
+    <div class="ticket-list">
+      ${sorted.length?sorted.map(i=>`<div data-id="${i.id}">${ticketRow(i.date,i.source||'Доход','var(--income)',i.note,i.amount,false)}</div>`).join(''):`<div class="empty-state">${icon('empty')}<div>Пока нет доходов</div></div>`}
+    </div>
+  `;
+  document.getElementById('add-income').onclick=()=>openIncomeModal();
+  document.querySelectorAll('.ticket-list [data-id]').forEach(el=>{
+    el.style.cursor='pointer';
+    el.onclick=()=>openIncomeModal(incomes.find(i=>i.id===el.dataset.id));
+  });
+  document.getElementById('fab').style.display='flex';
+  document.getElementById('fab').onclick=()=>openIncomeModal();
+}
+
+/* ==== ГЕНЕРИЧЕСКИЙ РАЗДЕЛ РАСХОДОВ ==== */
+function renderExpenseSection(group){
+  const g=GROUPS[group];
+  const list=expenses.filter(e=>e.group===group).sort((a,b)=>b.date.localeCompare(a.date));
+  const totals=subcatTotals(group);
+  document.getElementById('main').innerHTML = `
+    <div class="page-head"><div><div class="page-title">${g.label}</div><div class="page-sub">Всего потрачено: ${money(groupTotal(group))}</div></div>
+      <button class="btn btn-accent" id="add-expense">${icon('plus')}Добавить</button></div>
+    ${storageBannerHtml()}
+    <div class="charts-grid">
+      <div class="chart-card">
+        <h3>По категориям</h3>
+        <canvas id="sub-chart" height="180"></canvas>
+        <div style="margin-top:16px;">${legendRowsHtml(totals,SUBCAT_COLORS)}</div>
+      </div>
+      <div class="recent-card">
+        <h3 style="font-family:var(--font-display);font-size:16px;font-weight:600;margin:0 0 16px;">Записи</h3>
+        <div class="ticket-list">
+          ${list.length?list.map(e=>`<div data-id="${e.id}">${ticketRow(e.date,e.subcat,SUBCAT_COLORS[e.subcat]||g.color,e.note,e.amount,true)}</div>`).join(''):`<div class="empty-state">${icon('empty')}<div>Пока нет записей</div></div>`}
+        </div>
+      </div>
+    </div>
+  `;
+  if(groupChart){groupChart.destroy();groupChart=null;}
+  const labels=Object.keys(totals).filter(k=>totals[k]>0);
+  const data=labels.map(k=>totals[k]);
+  const colors=labels.map(k=>SUBCAT_COLORS[k]||g.color);
+  const canvas=document.getElementById('sub-chart');
+  if(canvas && data.length){
+    groupChart=new Chart(canvas,{type:'doughnut',data:{labels,datasets:[{data,backgroundColor:colors,borderColor:'#FFFFFF',borderWidth:3}]},
+      options:{plugins:{legend:{display:false}},cutout:'68%',responsive:true,maintainAspectRatio:true}});
+  }
+  document.getElementById('add-expense').onclick=()=>openExpenseModal(group);
+  document.querySelectorAll('.ticket-list [data-id]').forEach(el=>{
+    el.style.cursor='pointer';
+    el.onclick=()=>openExpenseModal(group, expenses.find(e=>e.id===el.dataset.id));
+  });
+  document.getElementById('fab').style.display='flex';
+  document.getElementById('fab').onclick=()=>openExpenseModal(group);
+}
+
+/* ==== МОТОЦИКЛ (с подвкладками) ==== */
+function renderMoto(){
+  if(motoSubview==='maintenance'){renderMaintenance();return;}
+  renderExpenseSection('moto');
+  injectMotoSubtabs();
+}
+function renderMaintenance(){
+  const sorted=[...maintenance].sort((a,b)=>b.date.localeCompare(a.date));
+  const lm=lastMileage();
+  document.getElementById('main').innerHTML = `
+    <div class="page-head"><div><div class="page-title">Мотоцикл</div><div class="page-sub">Обслуживание и пробег</div></div>
+      <button class="btn btn-accent" id="add-maint">${icon('plus')}Добавить запись</button></div>
+    <div id="moto-subtabs-slot"></div>
+    ${storageBannerHtml()}
+    <div class="stat-row">
+      <div class="stat-box"><div class="stat-box-label">Текущий пробег</div><div class="stat-box-value">${lm?lm.toLocaleString('ru-RU')+' км':'—'}</div></div>
+      <div class="stat-box"><div class="stat-box-label">Записей о ТО</div><div class="stat-box-value">${maintenance.length}</div></div>
+    </div>
+    <div class="ticket-list">
+      ${sorted.length?sorted.map(m=>`
+        <div class="ticket" data-id="${m.id}" style="cursor:pointer;">
+          <div class="ticket-head"><span class="badge" style="background:${GROUPS.moto.color}22;color:${GROUPS.moto.color};">ТО</span><span class="ticket-date">${fmtDate(m.date)}</span></div>
+          <div class="ticket-mileage">${icon('gauge')} ${m.mileage.toLocaleString('ru-RU')} км</div>
+          <div class="ticket-div"></div>
+          <div class="ticket-body">
+            <div class="ticket-desc">${m.description}</div>
+            ${m.cost?`<div class="ticket-amt" style="color:var(--expense);">−${money(m.cost)}</div>`:''}
+          </div>
+        </div>`).join(''):`<div class="empty-state">${icon('empty')}<div>Пока нет записей о ТО</div></div>`}
+    </div>
+  `;
+  injectMotoSubtabs();
+  document.getElementById('add-maint').onclick=()=>openMaintenanceModal();
+  document.querySelectorAll('.ticket-list [data-id]').forEach(el=>{
+    el.onclick=()=>openMaintenanceModal(maintenance.find(m=>m.id===el.dataset.id));
+  });
+  document.getElementById('fab').style.display='flex';
+  document.getElementById('fab').onclick=()=>openMaintenanceModal();
+}
+function injectMotoSubtabs(){
+  const slot=document.querySelector('.page-head');
+  const sub=document.createElement('div');
+  sub.className='subtabs';
+  sub.style.marginTop='-6px';
+  sub.innerHTML=`
+    <button class="subtab-btn ${motoSubview==='expenses'?'active':''}" data-sub="expenses">Расходы</button>
+    <button class="subtab-btn ${motoSubview==='maintenance'?'active':''}" data-sub="maintenance">Обслуживание и пробег</button>`;
+  slot.insertAdjacentElement('afterend', sub);
+  sub.querySelectorAll('[data-sub]').forEach(btn=>{
+    btn.onclick=()=>{motoSubview=btn.dataset.sub;renderMoto();};
+  });
+}
+
+/* ==== НАСТРОЙКИ ==== */
+function renderSettings(){
+  document.getElementById('main').innerHTML = `
+    <div class="page-head"><div><div class="page-title">Настройки</div></div></div>
+    ${storageBannerHtml()}
+    <div class="chart-card" style="margin-bottom:20px;max-width:420px;">
+      <h3>Начальный баланс</h3>
+      <div class="field"><label>Сумма на счету до начала учёта (₾)</label><input type="number" id="start-balance" step="0.01" value="${startBalance}"></div>
+      <button class="btn btn-accent" id="save-balance" style="width:100%;justify-content:center;">Сохранить</button>
+    </div>
+    <div class="chart-card" style="max-width:420px;">
+      <h3>Резервная копия</h3>
+      <div style="font-size:13px;color:var(--text-dim);margin-bottom:16px;">Скачайте все данные в файл JSON или восстановите их из ранее сохранённой копии.</div>
+      <div style="display:flex;gap:10px;">
+        <button class="btn" id="backup-download" style="flex:1;justify-content:center;">${icon('download')}Скачать копию</button>
+        <label class="btn" id="backup-restore-label" style="flex:1;justify-content:center;cursor:pointer;">${icon('upload')}Восстановить<input type="file" id="backup-file" accept=".json" style="display:none;"></label>
+      </div>
+    </div>
+  `;
+  document.getElementById('save-balance').onclick=async()=>{
+    startBalance=Number(document.getElementById('start-balance').value)||0;
+    await saveAll(); renderView();
+  };
+  document.getElementById('backup-download').onclick=()=>{
+    const data=JSON.stringify({startBalance,incomes,expenses,maintenance},null,2);
+    const blob=new Blob([data],{type:'application/json'});
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);
+    a.download='finance-backup-'+todayISO()+'.json';
+    a.click();
+  };
+  document.getElementById('backup-file').onchange=async()=>{
+    const file=document.getElementById('backup-file').files[0];
+    if(!file)return;
+    if(!confirm('Это заменит все текущие данные данными из файла. Продолжить?')){document.getElementById('backup-file').value='';return;}
+    try{
+      const text=await file.text();
+      const d=JSON.parse(text);
+      startBalance=d.startBalance||0;
+      incomes=d.incomes||[];
+      expenses=d.expenses||[];
+      maintenance=d.maintenance||[];
+      await saveAll();
+      renderView();
+      alert('Данные восстановлены');
+    }catch(e){
+      alert('Не удалось прочитать файл');
+    }
+    document.getElementById('backup-file').value='';
+  };
+  document.getElementById('fab').style.display='none';
+}
+
+/* ==== ГЛАВНЫЙ РЕНДЕР ==== */
+function renderView(){
+  if(currentView==='dashboard') renderDashboard();
+  else if(currentView==='income') renderIncome();
+  else if(currentView==='moto') renderMoto();
+  else if(currentView==='health') renderExpenseSection('health');
+  else if(currentView==='household') renderExpenseSection('household');
+  else if(currentView==='settings') renderSettings();
+}
+
+/* ==== ЭКРАН ВХОДА ==== */
+const APP_PASSWORD = "1234"; // ← обязательно поменяйте на свой пароль
+function isUnlocked(){return localStorage.getItem('pf_unlocked_v1')==='yes';}
+function unlock(){localStorage.setItem('pf_unlocked_v1','yes');}
+
+async function startApp(){
+  document.getElementById('lock-screen').style.display='none';
+  await loadAll();
+  renderNav();
+  renderView();
+}
+
+function initLock(){
+  if(isUnlocked()){startApp();return;}
+  const screen=document.getElementById('lock-screen');
+  const input=document.getElementById('lock-input');
+  const err=document.getElementById('lock-error');
+  screen.style.display='flex';
+  input.focus();
+  function attempt(){
+    if(input.value===APP_PASSWORD){unlock();startApp();}
+    else{err.style.display='block';input.value='';input.focus();}
+  }
+  document.getElementById('lock-btn').onclick=attempt;
+  input.onkeydown=(e)=>{if(e.key==='Enter')attempt();};
+}
+
+/* ---------- INIT ---------- */
+initLock();
+</script>
+</body>
+</html>
